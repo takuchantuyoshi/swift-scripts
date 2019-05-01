@@ -1,5 +1,5 @@
-#!/usr/bin/ruby
-#encoding: utf-8
+require "Unused/version"
+
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
@@ -49,10 +49,10 @@ class Item
   def to_xcode 
     "#{full_file_path}:#{@at}:0: warning: #{@type.to_s} #{@name.to_s} is unused"
   end
-
-
 end
-class Unused
+
+module Unused
+  class Error < StandardError; end
   def find
     items = []
     all_files = Dir.glob("**/*.swift").reject do |path|
@@ -213,6 +213,4 @@ class String
   def blink;          "\e[5m#{self}\e[25m" end
   def reverse_color;  "\e[7m#{self}\e[27m" end
 end
-
-
-Unused.new.find
+end
