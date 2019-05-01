@@ -2,4 +2,4 @@
 $LOAD_PATH.push File.expand_path("../../lib", __FILE__)
 
 require "Unused"
-Unused.unused.new.find
+Unused::unused.new.find
