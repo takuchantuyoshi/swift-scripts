@@ -52,7 +52,6 @@ class Item
 end
 
 module Unused
-  class Error < StandardError; end
   def find
     items = []
     all_files = Dir.glob("**/*.swift").reject do |path|
@@ -212,5 +211,4 @@ class String
   def underline;      "\e[4m#{self}\e[24m" end
   def blink;          "\e[5m#{self}\e[25m" end
   def reverse_color;  "\e[7m#{self}\e[27m" end
-end
 end
