@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Unused::VERSION
   spec.authors       = ["takuchantuyoshi"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "Some useful scripts for swift developers"
+  spec.description   = "Searches for unused swift functions, and variable at specified path"
   spec.homepage      = "https://github.com/takuchantuyoshi/swift-scripts"
   spec.license       = "MIT"
 
