@@ -52,7 +52,7 @@ class Item
 end
 
 module Unused
-  class unused
+  class Unused
   def find
     items = []
     all_files = Dir.glob("**/*.swift").reject do |path|
