@@ -52,6 +52,7 @@ class Item
 end
 
 module Unused
+  class unused
   def find
     items = []
     all_files = Dir.glob("**/*.swift").reject do |path|
@@ -184,7 +185,7 @@ module Unused
       !f.name.start_with?("test") && !f.modifiers.include?("@IBAction") && !f.modifiers.include?("override") && !f.modifiers.include?("@objc") && !f.modifiers.include?("@IBInspectable")
     }
   end
-
+ end
 end  
 
 class String
